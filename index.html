@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="个人组件库。"><title>Introduction 介绍 · Form</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a class="brand" href="#introduction"><span class="brand-mark">f</span><span>form</span></a>
+    </div>
+    <nav id="navigation" aria-label="组件导航"></nav>
+    <div class="sidebar-footer">
+      <a href="#introduction"><span data-icon="info"></span>Introduction 介绍</a>
+      <a href="#changelog"><span data-icon="history"></span>Changelog 更新日志</a>
+      <a href="#rights"><span data-icon="description"></span>Rights 使用说明</a>
+      <a href="https://github.com/hellozzlab/form" target="_blank" rel="noopener noreferrer" aria-label="GitHub 找到我，打开 Form 仓库（在新标签页打开）"><span data-icon="github"></span>GitHub 找到我</a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true" hidden></div>
+  <div class="main-wrap">
+    <header class="main-header">
+      <nav class="breadcrumb" aria-label="面包屑"><ol><li id="crumb-group">About 关于</li><li class="breadcrumb-separator" aria-hidden="true"><span data-icon="chevron_right" class="nav-chevron"></span></li><li id="crumb-title" aria-current="page">Introduction 介绍</li></ol></nav>
+      <div class="accent-picker">
+        <button class="icon-button" id="accent-toggle" aria-label="选择配色主题，当前：Form 界面灰" title="选择配色主题" aria-haspopup="menu" aria-expanded="false" aria-controls="accent-menu"><span data-icon="palette"></span></button>
+        <div class="accent-menu" id="accent-menu" role="menu" aria-label="配色主题" hidden></div>
+      </div>
+      <div class="radius-picker">
+        <button class="icon-button" id="radius-toggle" aria-label="选择圆角，当前：Default 默认" title="选择圆角" aria-haspopup="menu" aria-expanded="false" aria-controls="radius-menu"><span data-icon="rounded_corner"></span></button>
+        <div class="accent-menu" id="radius-menu" role="menu" aria-label="圆角配置" hidden></div>
+      </div>
+      <button class="icon-button" id="theme-toggle" aria-label="切换深色模式" title="切换主题" aria-pressed="false"><span data-icon="light_mode" class="theme-sun"></span><span data-icon="dark_mode" class="theme-moon"></span></button>
+      <button class="icon-button search-trigger" id="open-search" aria-label="搜索组件" title="搜索组件（⌘K / Ctrl+K）"><span data-icon="search"></span></button>
+      <button class="icon-button mobile-menu" id="mobile-menu" aria-label="展开导航" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button>
+    </header>
+    <div class="document-scroll" tabindex="0" role="region" aria-label="文档内容"><div class="document-layout"><main id="content"></main><aside class="toc" id="toc" aria-label="本页目录"></aside></div></div>
+  </div>
+  <dialog id="search-dialog" class="token-theme-light"><div class="search-input-wrap"><span data-icon="search"></span><input id="search-input" placeholder="搜索组件名称..." aria-label="搜索组件"></div><div id="search-results" hidden></div></dialog>
+  <script src="assets/icons/icons.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js/components.js"></script>
+  <script src="assets/illustrations/illustrations.js"></script>
+  <script src="js/app.js"></script>
+</body></html>

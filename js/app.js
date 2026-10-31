@@ -1163,6 +1163,8 @@ document.addEventListener('pointerdown', event => {
   if (event.button !== 0 || event.isPrimary === false || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   const link = event.target.closest('.nav-link, .sidebar-footer a');
   if (link) {
+    // 触屏与触控笔等待 click 确认激活，避免滚动起手触发页面跳转。
+    if (event.pointerType !== 'mouse') return;
     const href = link.getAttribute('href');
     if (!href?.startsWith('#') || !all.some(item => item.id === href.slice(1))) return;
     location.hash = href;
